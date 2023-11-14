@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgb(219, 193, 236), rgb(193, 202, 251));
+}
+.cal {
+    background-color: whitesmoke;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 0 #999;
+}
+
+.cal-screen {
+    background-color:rgb(0,0,37);
+    color: white;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: end;
+}
+
+.cal-screen h1 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+    padding: 20px 20px;
+    overflow-x: auto;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.cal-btns {
+  display: grid;
+  justify-content: center;
+  gap: 5px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 5px;
+}
+
+button {
+    border: none;
+    background-color: #dadada;
+    padding: 15px 0;
+    cursor: pointer;
+
+}
+
+button:active{
+  transform: translateY(1px);
+
+}
+
+button:hover{
+  filter: brightness(90%);
+
+}
+
+.operator {
+  background-color:#ce8686;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+
+}
+
+.equal-sign {
+   grid-column: 4 / 4 ;
+   grid-row: 2 / span 4;
+   color: white;
+   font-size: 40px;
+   background-color: rgb(117, 255, 104)
+}
+.clear-btn {
+    background-color: rgb(250, 89, 89);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.decimal {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 600px){
+  .cal {
+    width: 80%;
+  }
+}
